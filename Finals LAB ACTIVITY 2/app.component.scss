@@ -1,0 +1,96 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a; 
+  border-radius: 20px; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); 
+}
+
+.header {
+  background-color: black; 
+  color: whitesmoke; 
+}
+
+.title {
+  margin: 0;
+  font-size: 24px; 
+}
+
+.subtitle {
+  margin-top: 5px;
+  font-size: 16px; 
+}
+
+.tab-group {
+  margin-top: 20px;
+}
+
+.example-label {
+  font-size: 20px; 
+  margin-bottom: 10px;
+  color: #00ff9c; 
+}
+
+.example-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.basic, .link {
+  background-color: #ff5c5c; 
+  color: #fff;
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 10px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.basic:hover, .link:hover {
+  background-color: #ff2e63; 
+}
+
+.checkbox-setup {
+  display: flex;
+  gap: 20px;
+}
+
+.setup-card {
+  flex: 1;
+}
+
+.result-card {
+  flex: 1;
+}
+
+.example-h2 {
+  margin: 10px 0;
+  font-size: 20px; 
+  color: #e91e63; 
+}
+
+.example-section {
+  margin-bottom: 20px;
+}
+
+.example-margin {
+  margin-right: 10px;
+  color: #2196f3;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.snackbar-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.snackbar-input {
+  width: 100%;
+}

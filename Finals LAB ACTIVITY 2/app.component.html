@@ -1,0 +1,155 @@
+<!-- 
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="text-blue-500 hover:text-blue-800">
+        <img src="https://www.hau.edu.ph/images/logo-circle.png" class="h-16" alt="HAU Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HAU</span>
+    </a>
+    <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+       
+        <li>
+          <a routerLink="/add-book" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>Add Books</a>
+        </li>
+        <li>
+          <a routerLink="/books-list" routerLinkActive="active">Show Books</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+ 
+  <div id="navbarNav" class="collapse navbar-collapse">
+    <ul>
+      <li>
+        <a class="nav-link" routerLinkActive="active" routerLink="/books-list">Show Books</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLinkActive="active" routerLink="/add-book">Add Books</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<div class="container">
+  <mat-card class="header">
+    <mat-card-content>
+      <h1 class="title">Angular Material Components Demo</h1>
+      <p class="subtitle">by Archie Custodio</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="tab-group">
+    <mat-tab label="Raised Buttons">
+      <section>
+        <div class="example-label"></div>
+        <div class="example-button-row">
+          <button mat-raised-button class="basic">Basic</button>
+          <button mat-raised-button color="primary">Primary</button>
+          <button mat-raised-button color="accent">Accent</button>
+          <button mat-raised-button color="warn">Warn</button>
+          <button mat-raised-button disabled style="background-color: black;">Disabled</button>
+          <a mat-raised-button href="https://www.google.com/" target="_blank" class="link">Link</a>
+        </div>
+      </section>
+    </mat-tab>
+
+    <mat-tab label="Basic Buttons" style="color: black;">
+      <section>
+        <div class="example-label"></div>
+        <div class="example-button-row">
+          <button mat-button class="basic" style="color: red;">Basic</button>
+          <button mat-button color="primary">Primary</button>
+          <button mat-button color="accent">Accent</button>
+          <button mat-button color="warn">Warn</button>
+          <button mat-button disabled style="color: black;">Disabled</button>
+          <a mat-button href="https://www.google.com/" target="_blank" class="link" style="color: gray;">Link</a>
+        </div>
+      </section>
+    </mat-tab>
+
+    <mat-tab label="Checkbox Setup">
+      <div class="checkbox-setup">
+        <mat-card class="setup-card">
+          <mat-card-content>
+            <h2 class="example-h2"></h2>
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+              <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
+            </section>
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+            </section>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="result-card">
+          <mat-card-content>
+            <h2 class="example-h2"></h2>
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [(ngModel)]="checked" [(indeterminate)]="indeterminate" [labelPosition]="labelPosition" [disabled]="disabled">
+                Sample checkbox
+              </mat-checkbox>
+            </section>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Input Settings">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Favorite Food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+          <mat-label>Leave a Comment</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Age</mat-label>
+          <input matInput type="number" placeholder="Ex. 25" value="">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Ex. pat@example.com" value="">
+        </mat-form-field>
+      </form>
+    </mat-tab>
+
+    <mat-tab label="Snackbar">
+      <div class="snackbar-setup">
+        <mat-form-field class="snackbar-input">
+          <mat-label>Message</mat-label>
+          <input matInput value="" #message>
+        </mat-form-field>
+        
+        <mat-form-field class="snackbar-input">
+          <mat-label>Action</mat-label>
+          <input matInput value="" #action>
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" (click)="openSnackBar(message.value, action.value)">Show Snackbar</button>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+
+
+
+<router-outlet></router-outlet>
+
