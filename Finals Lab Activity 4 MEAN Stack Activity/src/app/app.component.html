@@ -1,0 +1,28 @@
+<div class="background-color">
+  <div class="container mat-elevation-z2">
+    <h1 class="mat-h1 book-library-heading">Book Library</h1>
+
+
+    <div class="form">
+      <input id="newBook" class="input-field" placeholder="Title" [(ngModel)]="newBook.title">
+      <input id="newDesc" class="input-field" placeholder="Description" [(ngModel)]="newBook.description">
+      <input id="newPrice" class="input-field" placeholder="Price" [(ngModel)]="newBook.price">
+      <button mat-raised-button color="primary" (click)="addBook()" class="add-button">Add Book</button>
+
+    </div>
+    
+    
+    <div id="bookList">
+      <mat-card *ngFor="let book of books; let i = index" class="book">
+        <div class="book-info">
+          <b>Title: {{book.title}}</b><br>
+          <b>Description: {{book.description}}</b><br>
+          <b>Price: {{book.price}}</b>
+        </div>
+        <div class="book-buttons">
+          <button mat-raised-button color="primary" class="delete-button" (click)="deleteBook(book.id)">Delete book</button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
